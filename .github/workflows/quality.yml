@@ -10,6 +10,9 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
+    - name: Conventional Commit Linter
+      uses: ahmadnassri/action-commit-lint@v2
+
     - name: Setup go
       uses: actions/setup-go@v4
       with:
