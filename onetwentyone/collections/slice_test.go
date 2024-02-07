@@ -333,8 +333,8 @@ func TestMax(t *testing.T) {
 func TestMin(t *testing.T) {
 	t.Parallel()
 	// Given
-	values := []int{0, 1, 2, 3, -1, 44, 5, 103, 6, 7, 99}
-	want := -1
+	values := []int{0, 1, 2, 3, -2, -1, 44, 5, 103, 6, 7, 99}
+	want := -2
 	// When
 	got := slices.Min(values)
 	// Then
