@@ -375,8 +375,8 @@ func TestReplace(t *testing.T) {
 func TestReverse(t *testing.T) {
 	t.Parallel()
 	// Given
-	values := []int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
-	want := []int{10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0}
+	values := []int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11}
+	want := []int{11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0}
 	// When
 	slices.Reverse(values)
 	// Then
