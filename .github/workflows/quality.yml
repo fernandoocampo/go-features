@@ -8,7 +8,7 @@ jobs:
   quality:
     runs-on: [ ubuntu-latest ]
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
     - name: Conventional Commit Linter
       uses: ahmadnassri/action-commit-lint@v2
@@ -16,17 +16,7 @@ jobs:
     - name: Setup go
       uses: actions/setup-go@v4
       with:
-        go-version: '1.21'
-    
-    - name: Cache Go Build
-      uses: actions/cache@v3
-      with:
-        path: |
-          ~/.cache/go-build
-          ~/go/pkg/mod
-        key: ${{ runner.os }}-go-features-${{ hashFiles('**/go.sum') }}
-        restore-keys: |
-          ${{ runner.os }}-go-features-
+        go-version: '1.22'
 
     - name: Go Test
       run: make test
