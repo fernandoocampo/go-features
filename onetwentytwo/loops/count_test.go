@@ -73,4 +73,46 @@ func TestCountLetters(t *testing.T) {
 	}
 }
 
-// "AlphaBravoCharlieDeltaEchoFoxtrotGolfHotelIndiaJuliettKiloLimaMikeNovemberOscarPapaQuebecRomeoSierraTangoUniformVictorWhiskeyX-rayYankeeZulu"
+func TestClosureWithLoops(t *testing.T) {
+	// Given
+	names := []string{"Git Hub", "Co Pilot", "Micro Soft", "N Vidia"}
+	expected := []string{"Hello Git Hub", "Hello Co Pilot", "Hello Micro Soft", "Hello N Vidia"}
+
+	// When
+	got := loops.GenerateGreetings(names)
+
+	// Then
+	for _, value := range got {
+		if !slices.Contains(expected, value) {
+			t.Errorf("want: %+v, but got: %+v", expected, got)
+			break
+		}
+	}
+}
+
+func TestNinito(t *testing.T) {
+	// Given
+	name := "Luis El Magico"
+	want := `L
+u
+i
+s
+ 
+E
+l
+ 
+M
+a
+g
+i
+c
+o
+`
+	// When
+	got := loops.WriteVertical(name)
+	// Then
+	if want != got {
+		t.Errorf(`want: %s, 
+but got: %s.`, want, got)
+	}
+}
