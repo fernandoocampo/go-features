@@ -34,7 +34,6 @@ func TestCompare(t *testing.T) {
 		testName := name
 		testData := data
 		t.Run(testName, func(tt *testing.T) {
-			tt.Parallel()
 			got := cmp.Compare(testData.x, testData.y)
 			// Then
 			if testData.want != got {

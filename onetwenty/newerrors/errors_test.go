@@ -70,8 +70,6 @@ func TestMultipleErrors(t *testing.T) {
 		testData := value
 
 		t.Run(title, func(tt *testing.T) {
-			tt.Parallel()
-
 			got := testData.anUser.Validate()
 
 			// Then

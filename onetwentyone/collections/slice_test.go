@@ -81,7 +81,6 @@ func TestBinarySearch(t *testing.T) {
 			givenValue := valueToSearch
 			want := data.want
 			exist := data.ok
-			tt.Parallel()
 			// When
 			got, ok := slices.BinarySearch(values, givenValue)
 			// Then

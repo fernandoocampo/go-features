@@ -40,7 +40,6 @@ func TestCompareUsers(t *testing.T) {
 	for title, value := range testcases {
 		testData := value
 		t.Run(title, func(tt *testing.T) {
-			tt.Parallel()
 			got := comparators.Equal(testData.user, givenUser)
 			// Then
 			if got != testData.want {
